@@ -95,6 +95,7 @@ export interface KeycloakInitOptions {
    * - `default` - Use default APIs that are available in browsers.
    * - `cordova` - Use a WebView in Cordova.
    * - `cordova-native` - Use Cordova native APIs, this is recommended over `cordova`.
+   * - `capacitor-native` - Use Capacitor native APIs.
    *
    * It's also possible to pass in a custom adapter for the environment you are running Keycloak in. In order to do so extend the `KeycloakAdapter` interface and implement the methods that are defined there.
    *
@@ -115,7 +116,7 @@ export interface KeycloakInitOptions {
    * });
    * ```
    */
-  adapter?: 'default' | 'cordova' | 'cordova-native' | KeycloakAdapter
+  adapter?: 'default' | 'cordova' | 'cordova-native' | 'capacitor-native' | KeycloakAdapter
 
   /**
    * Specifies an action to do on load.
@@ -167,7 +168,7 @@ export interface KeycloakInitOptions {
 
   /**
    * Specifies a default uri to redirect to after login or logout.
-   * This is currently supported for adapter 'cordova-native' and 'default'
+   * This is currently supported for adapter 'cordova-native', 'capacitor-native' and 'default'
    */
   redirectUri?: string
 
