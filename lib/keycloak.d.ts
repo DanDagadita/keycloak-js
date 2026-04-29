@@ -341,7 +341,7 @@ export interface KeycloakAdapter {
   login: (options?: KeycloakLoginOptions) => Promise<void>
   logout: (options?: KeycloakLogoutOptions) => Promise<void>
   register: (options?: KeycloakRegisterOptions) => Promise<void>
-  accountManagement: () => Promise<void>
+  accountManagement: (options?: KeycloakAccountOptions) => Promise<void>
   redirectUri: (options?: KeycloakRedirectUriOptions) => string
 }
 
@@ -598,7 +598,7 @@ declare class Keycloak {
   /**
   * Redirects to the Account Management Console.
   */
-  accountManagement (): Promise<void>
+  accountManagement (options?: KeycloakAccountOptions): Promise<void>
 
   /**
   * Returns the URL to login form.
