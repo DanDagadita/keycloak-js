@@ -297,6 +297,12 @@ export interface KeycloakLoginOptions {
   locale?: string
 
   /**
+   * Sets the non-standard 'kc_theme' query param (forwards the app's color
+   * scheme so themes that read it can match light/dark).
+   */
+  kcTheme?: string
+
+  /**
    * Specifies arguments that are passed to the Cordova in-app-browser (if applicable).
    * Options 'hidden' and 'location' are not affected by these arguments.
    * All available options are defined at https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-inappbrowser/.
@@ -324,6 +330,12 @@ export interface KeycloakAccountOptions {
    * Specifies the uri to redirect to when redirecting back to the application.
    */
   redirectUri?: string
+
+  /**
+   * Sets the non-standard 'kc_theme' query param (forwards the app's color
+   * scheme so themes that read it can match light/dark).
+   */
+  kcTheme?: string
 }
 export interface KeycloakError {
   error: string
